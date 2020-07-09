@@ -21,8 +21,8 @@ export const migrate = async (cwd: string) => {
     const outputFilePath = path.join(workflowDir, "test.yml");
     const hasYaml = await fs
         .access(outputFilePath)
-        .then(() => false)
-        .catch(() => true);
+        .then(() => true)
+        .catch(() => false);
     if (hasYaml) {
         console.log(`Already exists ${outputFilePath}`);
         return;
