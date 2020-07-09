@@ -1,0 +1,78 @@
+{
+  "name": "@azu/migrate-travis-ci-to-github-actions",
+  "version": "1.0.0",
+  "description": "Migrate Travis CI to GitHub Actions. Node.js CI settings",
+  "keywords": [
+    "travis",
+    "github",
+    "actions"
+  ],
+  "homepage": "https://github.com/azu/migrate-travis-ci-to-github-actions",
+  "bugs": {
+    "url": "https://github.com/azu/migrate-travis-ci-to-github-actions/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azu/migrate-travis-ci-to-github-actions.git"
+  },
+  "license": "MIT",
+  "author": "azu",
+  "main": "lib/migrate-travis-ci-to-github-actions.js",
+  "types": "lib/migrate-travis-ci-to-github-actions.d.ts",
+  "bin": {
+    "migrate-travis-ci-to-github-actions": "bin/cmd.js"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "src/"
+  ],
+  "scripts": {
+    "build": "cross-env NODE_ENV=production tsc -p .",
+    "clean": "rimraf lib/",
+    "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\"",
+    "prepublish": "npm run --if-present build",
+    "test": "mocha \"test/**/*.ts\"",
+    "watch": "tsc -p . --watch"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css}": [
+      "prettier --write"
+    ]
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": false,
+    "tabWidth": 4
+  },
+  "devDependencies": {
+    "@types/mocha": "^7.0.2",
+    "@types/node": "^14.0.20",
+    "cross-env": "^7.0.2",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "mocha": "^8.0.1",
+    "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
+    "ts-node": "^8.10.2",
+    "ts-node-test-register": "^8.0.1",
+    "typescript": "^3.9.6"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "has-yarn": "^2.1.0",
+    "meow": "^7.0.1",
+    "yaml": "^1.10.0"
+  }
+}
