@@ -40,7 +40,7 @@ export const migrate = async (cwd: string) => {
     try {
         const readmeContent = await fs.readFile(readmeFilePath, "utf-8");
         // [![Build Status](https://travis-ci.org/azu/safe-marked.svg?branch=master)](https://travis-ci.org/azu/safe-marked)
-        const travisBadgePattern = /\[!\[Build Status]\(https:\/\/travis-ci.org\/(?<owner>.*?)\/(?<repo>.*)\?.*\)]\(.*\)/;
+        const travisBadgePattern = /\[!\[Build Status]\(https:\/\/travis-ci.org\/(?<owner>.*?)\/(?<repo>.*)\.svg\?.*\)]\(.*\)/;
         const match = readmeContent.match(travisBadgePattern);
         const owner = match?.groups?.owner;
         const repo = match?.groups?.repo;
