@@ -21,11 +21,6 @@ Install with [npm](https://www.npmjs.com/):
 
 See [Releases page](https://github.com/azu/migrate-travis-ci-to-github-actions/releases).
 
-## Running tests
-
-Install devDependencies and Run `npm test`:
-
-    npm test
 
 ## Contributing
 
