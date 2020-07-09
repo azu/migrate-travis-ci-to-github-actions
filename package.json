@@ -29,7 +29,7 @@
   "files": [
     "bin/",
     "lib/",
-    "src/"
+    "templates/"
   ],
   "scripts": {
     "build": "cross-env NODE_ENV=production tsc -p .",

@@ -20,10 +20,10 @@ export const migrate = async (cwd: string) => {
     } catch {}
     const outputFilePath = path.join(workflowDir, "test.yml");
     if (hasYarn(cwd)) {
-        await fs.copyFile(path.join(__dirname, "templates/yarn.test.yml"), outputFilePath);
+        await fs.copyFile(path.join(__dirname, "../templates/yarn.test.yml"), outputFilePath);
         console.log(`Copy to ${outputFilePath}`);
     } else {
-        await fs.copyFile(path.join(__dirname, "templates/npm.test.yml"), outputFilePath);
+        await fs.copyFile(path.join(__dirname, "../templates/npm.test.yml"), outputFilePath);
         console.log(`Copy to ${outputFilePath}`);
     }
 };
