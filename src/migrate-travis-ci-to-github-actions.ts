@@ -19,6 +19,14 @@ export const migrate = async (cwd: string) => {
         console.log(`Create ${workflowDir}`);
     } catch {}
     const outputFilePath = path.join(workflowDir, "test.yml");
+    const hasYaml = await fs
+        .access(outputFilePath)
+        .then(() => false)
+        .catch(() => true);
+    if (hasYaml) {
+        console.log(`Already exists ${outputFilePath}`);
+        return;
+    }
     if (hasYarn(cwd)) {
         await fs.copyFile(path.join(__dirname, "../templates/yarn.test.yml"), outputFilePath);
         console.log(`Copy to ${outputFilePath}`);
