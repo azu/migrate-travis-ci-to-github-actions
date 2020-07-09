@@ -22,10 +22,6 @@
   "bin": {
     "migrate-travis-ci-to-github-actions": "bin/cmd.js"
   },
-  "directories": {
-    "lib": "lib",
-    "test": "test"
-  },
   "files": [
     "bin/",
     "lib/",
@@ -36,7 +32,6 @@
     "clean": "rimraf lib/",
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\"",
     "prepublish": "npm run --if-present build",
-    "test": "mocha \"test/**/*.ts\"",
     "watch": "tsc -p . --watch"
   },
   "husky": {
@@ -55,16 +50,12 @@
     "tabWidth": 4
   },
   "devDependencies": {
-    "@types/mocha": "^7.0.2",
     "@types/node": "^14.0.20",
     "cross-env": "^7.0.2",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
-    "mocha": "^8.0.1",
     "prettier": "^2.0.5",
     "rimraf": "^3.0.2",
-    "ts-node": "^8.10.2",
-    "ts-node-test-register": "^8.0.1",
     "typescript": "^3.9.6"
   },
   "publishConfig": {
