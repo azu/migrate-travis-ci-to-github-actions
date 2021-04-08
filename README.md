@@ -6,7 +6,7 @@ Migrate Travis CI to GitHub Actions.
 
 - [x] Remove `.travis.yml`
 - [x] Copy [templates](templates) to `.github/workflows/test.yml`
-- [x] Rewrite a badge link in README.md
+- [x] Rewrite a badge link in README.mdt
 
 ## Install
 
