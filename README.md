@@ -1,12 +1,13 @@
 # @azu/migrate-travis-ci-to-github-actions
 
-Migrate Travis CI to GitHub Actions.
+Migrate Travis CI to GitHub Actions in my Node.js use-case.
 
 ## Does
 
 - [x] Remove `.travis.yml`
 - [x] Copy [templates](templates) to `.github/workflows/test.yml`
-- [x] Rewrite a badge link in README.mdt
+    - Current template has only Node.js basic pattern
+- [x] Rewrite a badge link in README.md
 
 ## Install
 
@@ -21,7 +22,6 @@ Install with [npm](https://www.npmjs.com/):
 ## Changelog
 
 See [Releases page](https://github.com/azu/migrate-travis-ci-to-github-actions/releases).
-
 
 ## Contributing
 
