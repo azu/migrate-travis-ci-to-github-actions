@@ -1,6 +1,6 @@
 {
   "name": "@azu/migrate-travis-ci-to-github-actions",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Migrate Travis CI to GitHub Actions. Node.js CI settings",
   "keywords": [
     "travis",
